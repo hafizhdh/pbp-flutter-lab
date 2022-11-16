@@ -69,3 +69,40 @@ Kelas: D
     3. Mengatur warna dari text sesuai ketentuan, jika `Genap` maka berwarna merah dan `Ganjil` maka berwarna biru
 
     4. Menambahkan button `+` dan `-` yang akan memanggil fungsi `_incrementCounter()` dan `_decrementCounter` serta mengatur visibility pada button `-` supaya hilang ketika `_counter` bernilai 0 (BONUS).
+
+
+# Tugas 8: Flutter Form
+
+1. Navigator.push vs Navigator.pushReplacement
+
+    `Navigator.push()` merupakan metode yang digunakan untuk menavigasi route yang cara kerjanya mirip dengan stack yaitu menambahkan route pada top of stack
+
+    `Navigator.pushReplacement()` mirip dengan push namun akan menggantikan route yang sekarang dan ditimpa dengan route yang di push
+
+2. Widget 
+
+    1. TextFormField(): Wiget untuk membuat input field
+    2. DropdownButton(): Untuk membuat dropdown
+    3. TextButton(): Membuat button
+    4. Card(): Membuat card
+    5. Dialog(): Untuk menampilkan dialog yang muncul pada layar
+    6. Drawer(): Untuk membuat akses menuju route lain
+
+3. Event
+
+    1. onTap: memanggil fungsi yang didefinisikan ketika user melakukan tap pada widget
+    2. onPressed: memanggil fungsi yang didefinisikan ketika user menekan suatu button
+    3. onSaved: memanggil fungsi yang didefinisikan untuk menyimpan input dari form
+    4. onChanged: memanggil fungsi yang didefinisikan ketika user mengubah isi input TextFormField
+
+4. Cara kerja navigator
+
+    Navigator bekerja sebagai widget yang mengatur route yang ada. Cara kerjanya adalah dengan menggunakan implementasi sepeti stack dimana kita harus melakukan push() dan pop() dan akan menampilkan route yang ada pada top of stack
+
+5. Implementasi tugas 8
+
+    1. Membuat drawer dengan tiga halaman yang dapat diakses yaitu counter_7, tambah budget (untuk menambahkan budget), dan data budget (untuk menampilkan budget yang telah dibuat)
+    2. Membuat form.dart yang berisikan form untuk menerima input data dari user
+    3. Membuat class Budget yang berfungsi untuk membuat objek baru berdasarkan input user yang diberikan
+    4. Menampilkan data budget yang telah dibuat pada halaman data_budget.dart dengan memanfaatkan widget card untuk mengatur tampilan dari budget
+    5. Refactor drawer ke file drawer.dart (BONUS)
