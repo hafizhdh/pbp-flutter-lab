@@ -1,7 +1,7 @@
-import 'package:counter_7/data_budget.dart';
+import 'package:counter_7/page/data_budget.dart';
 import 'package:flutter/material.dart';
-import 'package:counter_7/form.dart';
-import 'package:counter_7/drawer.dart';
+import 'package:counter_7/page/form.dart';
+import 'package:counter_7/page/drawer.dart';
 
 void main() {
   runApp(const MyApp());
@@ -138,12 +138,14 @@ class _MyHomePageState extends State<MyHomePage> {
               Visibility(
                 visible: _counter == 0 ? false : true,
                 child: FloatingActionButton(
+                  heroTag: "incrementCounter",
                   onPressed: _decrementCounter,
                   tooltip: 'Decrement',
                   child: const Icon(Icons.remove),
                 ),
               ),
               FloatingActionButton(
+                heroTag: "incrementCounter",
                 onPressed: _incrementCounter,
                 tooltip: 'Increment',
                 child: const Icon(Icons.add),

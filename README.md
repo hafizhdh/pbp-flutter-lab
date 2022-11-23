@@ -106,3 +106,31 @@ Kelas: D
     3. Membuat class Budget yang berfungsi untuk membuat objek baru berdasarkan input user yang diberikan
     4. Menampilkan data budget yang telah dibuat pada halaman data_budget.dart dengan memanfaatkan widget card untuk mengatur tampilan dari budget
     5. Refactor drawer ke file drawer.dart (BONUS)
+
+# Tugas 9: Integrasi Web Service pada Flutter
+
+1. Pengambilan data JSON tanpa membuat model terlebih dahulu dapat dilakukan. Namun hal tersebut dinilai kurang praktis dan efisien karena kita harus mengolah response JSON dari web secara manual. Oleh karena itu sebaiknya dibuat model terlebih dahulu agar lebih terstruktur saat digunakan.
+
+2. Widget
+
+    1. `Flexible()` merupakan widget yang mengatur fleksibilitas dari `Row`, `Column`, dan `Flex`
+    2. `FutureBuilder()` merupakan widget yang mem-build dirinya sendiri berdasarkan snapshot dari `Future`
+    3. `GestureDetector()` merupakan widget yang mendeteksi gesture dari pengguna
+    4. `Align()` merupakan widget yang mengatur alignment
+
+3. Alur Mengambil dan Menampilkan data
+
+    1. Membuat model sesuai data JSON
+    2. Melakukan HTTP `GET` method untuk mengambil data JSON
+    3. Melakukan decode data JSON dan diubah menjadi objek dari model
+    4. Menampilkan data JSON yang telah diolah pada widget-widget yang sesuai
+
+4. Implementasi Tugas 9
+
+    1. Menambahkan tombol navigasi pada drawer untuk menuju halaman mywatchlist
+    2. Membuat model mywatchlist dengan memanfaatkan website [QuickType](https://app.quicktype.io/) dan disimpan pada file `mywatchlist.dart`
+    3. Membuat fungsi `fetchMyWatchList()` untuk mengambil data JSON berdasarkan [Tugas 3](https://assignment-pbp2.herokuapp.com/mywatchlist/json) dan menampilkan setiap judul pada halaman mywatchlist
+    4. Menambahkan event `onTap()` untuk melakukan navigasi pada detail dari judul film yang ditekan
+    5. Menambahkan halaman detail yang berisi detail dari suatu film
+    6. Menambahkan button kembali pada halaman detail yang menuju ke halaman mywatchlist
+    
